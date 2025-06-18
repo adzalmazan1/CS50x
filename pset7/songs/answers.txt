@@ -1,0 +1,4 @@
+To characterize audio aura, I would do the same as Spotify, wherein the average energy, valence, and danceability are calculated.
+
+This characterization may not be the best representation of person's music personality because a variety of criteria to look into exist.
+One particular aspect that I find interesting is looking at the key trend of their top songs as well.

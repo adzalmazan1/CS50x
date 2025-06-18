@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                const crct = document.querySelector('#crct'), inc = document.querySelectorAll('.inc'); // querySelectorAll
+                const p1 = document.querySelector('#p1Status'), p2 = document.querySelector('#p2Status');
+
+                // Correct button turns green when clicked
+                crct.addEventListener('click', function() {
+                    crct.style.backgroundColor = "green";
+                    p1.innerHTML = 'Correct';
+                });
+
+
+                // Incorrect button turns red when clicked
+                for(let i = 0; i < inc.length; i++) {
+                    inc[i].addEventListener('click', function() {
+                        inc[i].style.backgroundColor = "red";
+                        p1.innerHTML = 'Incorrect';
+                    });
+                }
+
+                const form = document.querySelector('form');
+                form.addEventListener('submit', function(e) {
+                    const ans = document.getElementById('ans').value.toLowerCase(); // only take the value of ans on 'submit' -- listening for submit event
+                    if(ans.localeCompare('philippines') == 0) {
+                        p2.innerHTML = 'Correct';
+                    }
+                    else {
+                        p2.innerHTML = 'Incorrect';
+                    }
+                    e.preventDefault();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>Which of the following is a narcissistic number?</h3>
+                <button class="inc">264</button>
+                <button id="crct"">153</button>
+                <button class="inc">30</button>
+                <button class="inc">1505</button>
+                <p id="p1Status"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>Which country is referred to as the "Pearl of the Orient Seas"?</h3>
+                 <form>
+                    <input autocomplete="off" autofocus id="ans" placeholder="Answer" type="text">
+                    <input id="subBtn" type="submit" value="Check Answer">
+                 </form>
+                 <p id="p2Status"></p>
+            </div>
+        </div>
+    </body>
+</html>

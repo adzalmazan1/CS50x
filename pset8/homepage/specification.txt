@@ -1,0 +1,31 @@
+10 HTML tags used
+    - div
+    - nav
+    - a
+    - button
+    - span
+    - ul
+    - li
+    - h2
+    - hr
+    - p
+
+5 CSS properties used
+    - list-style-type
+    - padding
+    - text-align
+    - border-radius
+    - background
+
+How I chose to use Javascript and Bootstrap
+    - I mainly used bootstrap for the container thing
+    so everything is in place whether for desktop
+    or mobile. I also utilized its grid thing (using
+    row and col classes). Moreover, made use of one of its
+    default for navigation bar, and just modified it on
+    my own.
+
+    - As for javascript, I used it mainly in the about and contact page.
+    In the about page, I used it to make a piano display for my information.
+    For the contact page, I used it for submitting the form, printing in console,
+    adding options to dropdown list, etc.

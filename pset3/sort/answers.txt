@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: assuming that sort2 is merge sort, left with bubble and selection sort, the runtime for bubble sort (for the sorted txts) should be relatively faster compared to selection sort
+
+sort2 uses: merge sort
+
+How do you know?: used the idea that merge sort would be best at sorting the random txts
+
+sort3 uses: selection sort
+
+How do you know?: choices narrowed down
