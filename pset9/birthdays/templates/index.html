@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Add a Birthday</h2>
+<!-- TODO: Create a form for users to submit a name, a month, and a day -->
+    <form action="/" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" required type="text">
+        <input autocomplete="off" name="month" placeholder="Month" required type="number" min="1" max="12">
+        <input autocomplete="off" name="day" placeholder="Day" required type="number" min="1" max="31">
+        <input type="submit" value="Add Birthday">
+    </form>
+
+    <div class="section">
+        <form action="/modify_mode" method="post">
+            <input type="submit" value="Modify Mode">
+        </form>
+    </div>
+</div>
+{% endblock %}

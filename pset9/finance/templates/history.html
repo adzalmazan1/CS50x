@@ -1,0 +1,33 @@
+{% extends "layout.html"%}
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <!-- To add here -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Loop over something via Jinja -->
+            {% if user_transactions is defined %}
+                {% for user_transaction in user_transactions %}
+               <tr>
+                    <td class="text-start"> {{ user_transaction.symbol }} </td>
+                    <td class="text-end"> {{ user_transaction.shares }} </td>
+                    <td class="text-end"> {{ user_transaction.price }} </td>
+                    <td class="text-end"> {{ user_transaction.month }} {{"/"}} {{ user_transaction.day }} {{"/"}} {{ user_transaction.year }} </td>
+               </tr>
+               {% endfor %}
+            {% endif %}
+        </tbody>
+
+    </table>
+{% endblock %}
